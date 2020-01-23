@@ -1,7 +1,5 @@
 import requests
 
-webhook_url = "slack-webhook-url"
-
 class SlackWebhook():
     def __init__(self, webhook_url, verbose=False):
         self.webhook_url = webhook_url
@@ -27,6 +25,7 @@ class SlackWebhook():
             self.log(e)
         
         
+webhook_url = "slack-webhook-url"
 slack_loggger = SlackWebhook(webhook_url)
 slack_loggger("New Model",  epoch=1, val_score=1.23)
     
